@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
-function App() {
+const App = function () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">
+          Player 1
+        </h2>
+        <p class="score" id="score--0">
+          43
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">
+            0
+          </p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">
+          Player 2
+        </h2>
+        <p class="score" id="score--1">
+          24
+        </p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">
+            0
+          </p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
   );
-}
+};
 
 export default App;
